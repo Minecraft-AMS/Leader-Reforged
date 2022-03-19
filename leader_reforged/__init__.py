@@ -1,19 +1,5 @@
 from mcdreforged.api.all import *
 
-PLUGIN_METADATA = {
-    "id": "leader_reforged",
-    "version": "1.0.0",
-    "name": "Leader Reforged",
-    "description": {
-        "en_us": "This is a simplified and reforged version for Leader, allowing to mark a leader.",
-        "zh_cn": "这个插件简化并实现了 Leader 的功能，使得可以指出一个玩家作为导游。"
-    },
-    "author": "XavierWah",
-    "dependencies": {
-        "mcdreforged": ">=2.0.0"
-    }
-}
-
 LANGUAGE = {
     "en_us": {
         "mark": "{} is now a leader.",
