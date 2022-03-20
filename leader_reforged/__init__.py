@@ -1,5 +1,6 @@
 from mcdreforged.api.all import *
 
+'''
 LANGUAGE = {
     "en_us": {
         "mark": "{} is now a leader.",
@@ -20,23 +21,27 @@ LANGUAGE = {
         "help_message": "选择是否成为导游。"
     }
 }
+'''
 
 leaders = []
 players = []
 
+'''
 try:
     lang = LANGUAGE[ServerInterface.get_instance().get_mcdr_language()]
 except Exception:
     lang = LANGUAGE["en_us"]
+'''
 
 def leader(server: ServerInterface, info: Info, player: str = None):
-    global leaders, players, lang
+    global leaders, players
+    # global lang
     controlled = False
     if player is None:
         player = info.player
     else:
         if player not in players:
-            server.reply(info, RText(lang["player_not_found_error"], RColor.red))
+            server.reply(info, RText(server.rtr("leader_reforged.error.player_not_found"), RColor.red))
             return
         controlled = True
     if info.player == player:
@@ -44,15 +49,15 @@ def leader(server: ServerInterface, info: Info, player: str = None):
     if player not in leaders:
         leaders.append(player)
         server.execute(f"/effect give {player} minecraft:glowing 86400 0 true")
-        server.tell(player, RText(lang["being_marked"], RColor.green, RStyle.italic))
+        server.tell(player, RText(server.rtr("leader_reforged.usage.being_marked"), RColor.green, RStyle.italic))
         if controlled:
-            server.reply(info, RText(lang["mark"].format(player), RColor.green, RStyle.italic))
+            server.reply(info, RText(server.rtr("leader_reforged.usage.mark", player), RColor.green, RStyle.italic))
     else:
         leaders.remove(player)
         server.execute(f"/effect clear {player} minecraft:glowing")
-        server.tell(player, RText(lang["being_unmarked"], RColor.green, RStyle.italic))
+        server.tell(player, RText(server.rtr("leader_reforged.usage.being_unmarked"), RColor.green, RStyle.italic))
         if controlled:
-            server.reply(info, RText(lang["unmark"].format(player), RColor.green, RStyle.italic))
+            server.reply(info, RText(server.rtr("leader_reforged.usage.unmark", player), RColor.green, RStyle.italic))
 
 def on_user_info(server: PluginServerInterface, info: Info):
     raw_command = info.content.split()
@@ -62,11 +67,11 @@ def on_user_info(server: PluginServerInterface, info: Info):
         elif len(raw_command) == 2:
             leader(server, info, raw_command[1])
         else:
-            server.reply(info, RText(lang["command_error"], RColor.red))
+            server.reply(info, RText(server.rtr("leader_reforged.error.usage"), RColor.red))
 
 def on_load(server: PluginServerInterface, old):
-    global lang
-    server.register_help_message("!!leader", lang["help_message"])
+    # global lang
+    server.register_help_message("!!leader", server.rtr("leader_reforged.plugin.help_message"))
 
 def on_player_joined(server: PluginServerInterface, player: str, info: Info):
     global players

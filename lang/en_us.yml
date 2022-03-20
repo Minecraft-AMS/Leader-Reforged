@@ -1,0 +1,11 @@
+leader_reforged:
+  usage:
+    mark: "{} is now a leader."
+    unmark: "{} is now no longer a leader."
+    being_marked: "You are now a leader."
+    being_unmarked: "You are now no longer a leader."
+  error:
+    usage: "Unknown usage."
+    player_not_found: "Player not found."
+  plugin:
+    help_message: "Marks a leader."
