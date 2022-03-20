@@ -4,8 +4,10 @@ leader_reforged:
     unmark: "{} 不再是导游了。"
     being_marked: "你成为导游了。"
     being_unmarked: "你不再是导游了。"
+    leaders: "所有的导游：{}。"
   error:
     usage: "未知用法。"
     player_not_found: "未找到玩家。"
+    max_limit_reached: "领队数量已达到上限。"
   plugin:
     help_message: "选择是否成为导游。"
