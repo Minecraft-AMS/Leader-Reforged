@@ -1,0 +1,13 @@
+FILENAME: $PLUGIN_ID$-v$VERSION$.mcdr
+EXPORT_DIRECTORY: makeplugin
+
+INCLUDE:
+  DIRECTORY:
+    - $PLUGIN_ID$
+    - lang
+  FILE:
+    - mcdreforged.plugin.json
+
+EXCLUDE:
+  DIRECTORY: []
+  FILE: []
