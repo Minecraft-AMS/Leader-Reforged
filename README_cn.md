@@ -10,6 +10,10 @@
 
 ## 命令
 
-`!!leader` 使你自己成为导游，或者让你自己不再是导游。
+`!!leader` 显示 Leader Reforged 帮助信息。
 
-`!!leader [Playername]` 与 `!!leader` 的用法相同，但作用在指定的玩家身上。
+`!!leader + [玩家名]` 将玩家加入导游。
+
+`!!leader - [玩家名]` 将玩家移出导游。
+
+`!!leader ?` 查看所有导游。

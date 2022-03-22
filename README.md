@@ -10,6 +10,11 @@ Needs `v2.0.0+` MCDReforged. *not verified*
 
 ## Command
 
-`!!leader` Marks yourself as a leader, or makes yourself no longer a leader.
+`!!leader` Display Leader Reforged's help messages.
 
-`!!leader [Playername]` Same as `!!leader`, but applies on selected player.
+`!!leader + [Player]` Adds a player to leaders.
+
+`!!leader - [Player]` Removes a player from leaders."
+
+`!!leader ?` Query all leaders.
+

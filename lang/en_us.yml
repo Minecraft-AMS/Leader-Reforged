@@ -1,11 +1,17 @@
 leader_reforged:
-  usage:
-    mark: "{} is now a leader."
-    unmark: "{} is now no longer a leader."
-    being_marked: "You are now a leader."
-    being_unmarked: "You are now no longer a leader."
-    leaders: "All leaders: {}."
+  info:
+    mark: "{player} is now a leader."
+    unmark: "{player} is now no longer a leader."
+    all_leaders: "All leaders: ({now}/{maximum}) {players}."
+    no_leader: "There's currently no leaders."
   error:
-    max_limit_reached: "Max leaders reached."
+    player_exists: "{player} is already a leader."
+    player_not_exists: "{player} is not a leader."
+    max_limit_exceeded: "Max leaders reached."
   plugin:
     help_message: "Marks a leader."
+    help_line: 
+      0: "> Leader Reforged Help Menu"
+      1: " !!leader + [Player] Adds a player to leaders."
+      2: " !!leader - [Player] Removes a player from leaders."
+      3: " !!leader ? Query all leaders."
