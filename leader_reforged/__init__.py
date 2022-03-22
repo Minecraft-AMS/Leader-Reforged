@@ -27,7 +27,6 @@ class Leader(list):
             INFO = [RColor.white]
             ERROR = [RColor.red]
 
-        @staticmethod
         def say(styles: LogStyles()):
 
             """
@@ -44,7 +43,6 @@ class Leader(list):
 
             return inner
 
-        @staticmethod
         def shout(styles: LogStyles()):
 
             """
