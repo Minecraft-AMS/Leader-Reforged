@@ -6,8 +6,6 @@ leader_reforged:
     being_unmarked: "You are now no longer a leader."
     leaders: "All leaders: {}."
   error:
-    usage: "Unknown usage."
-    player_not_found: "Player not found."
     max_limit_reached: "Max leaders reached."
   plugin:
     help_message: "Marks a leader."
