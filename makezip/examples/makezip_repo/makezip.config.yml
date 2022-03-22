@@ -1,0 +1,16 @@
+FILENAME: makezip-$VERSION$.zip
+EXPORT_DIRECTORY: export
+
+INCLUDE:
+  DIRECTORY:
+    - makezip
+  FILE: []
+
+EXCLUDE:
+  DIRECTORY:
+    - makezip/.git
+    - makezip/__pycache__
+    - makezip/examples
+  FILE:
+    - makezip.config.yml
+    - makezip_repo.py

@@ -1,0 +1,11 @@
+FILENAME: makezip-v$VERSION$.zip
+EXPORT_DIRECTORY: export
+
+INCLUDE:
+  DIRECTORY:
+  FILE:
+    - mcdreforged.plugin.json
+
+EXCLUDE:
+  DIRECTORY: []
+  FILE: []
