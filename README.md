@@ -15,6 +15,7 @@ Needs `v2.0.0+` MCDReforged. *not verified*
 `!!leader + [Player]` Adds a player to leaders.
 
 `!!leader - [Player]` Removes a player from leaders."
+- Removes all players from leaders when `[Player]` is `*`.
 
 `!!leader ?` Query all leaders.
 

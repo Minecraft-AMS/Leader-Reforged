@@ -211,9 +211,12 @@ class Leader(list):
         Overrides `list.remove()`.\n
         Now also processes plugin works.
         """
-
         if player is None:
             player = executor
+        if player == "*":
+            for leader in [x for x in self.__iter__()]:
+                self.remove(executor, leader)
+            return
         if player not in self.__iter__():
             self.logger.player_not_exists(executor, player)
             return
