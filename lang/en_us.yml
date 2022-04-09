@@ -14,4 +14,5 @@ leader_reforged:
       0: "> Leader Reforged Help Menu"
       1: " !!leader + [Player] Adds a player to leaders."
       2: " !!leader - [Player] Removes a player from leaders."
-      3: " !!leader ? Query all leaders."
+      3: " · Removes all players from leaders when [Player] is *"
+      4: " !!leader ? Query all leaders."

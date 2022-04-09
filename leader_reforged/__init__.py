@@ -183,7 +183,7 @@ class Leader(list):
     # Avaliavle methods
 
     def help_menu(self, executor: str) -> None:
-        for line in range(4):
+        for line in range(5):
             self.logger.help_line(executor, line)
 
     def append(self, executor: str, player: str = None) -> None:
